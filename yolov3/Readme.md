@@ -45,7 +45,10 @@ SegmentationObject
 ![抠图](./2011_002223.png)
 
 我们只用到了JPEGImages Annotations 这两个文件夹，因为里面的xml有我们需要的每张图种含有的物体类，和物体位置矩形框。
-执行如下：
+先生成train.txt：
+
+`cat 2007_train.txt 2007_val.txt 2012_*.txt > train.txt`
+然后生成标签文件
 
 ```
 zhouhua@xbox:~/voc$ ls VOCdevkit/
@@ -135,6 +138,7 @@ subdivisions=2
 然后可以看到IOU在不断增加
 <center><img src=./IOU.png height="200" width="400"></img></center>
 如果中途不小心down机了，没关系，继续从关机前的位置训练
+
 `./darknet detector train cfg/voc.data cfg/yolov3-tiny-voc2.cfg backup/yolov3-tiny-voc2.backup`
 
 ### 6.训练到一半也可以看效果
@@ -145,6 +149,7 @@ subdivisions=2
 <center><img src=./predictions_001.jpg height="300" width="400"></img></center>
 
 如果你觉得框的太多了，就降低阈值吧：
+
 `./darknet detector test cfg/voc.data cfg/yolov3-tiny-voc2.cfg backup/yolov3-tiny-voc2.backup data/dog.jpg -thresh 0.1`
 
 <center><img src=./RESULT2.png height="300" width="400"></img></center>
