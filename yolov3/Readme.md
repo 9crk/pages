@@ -137,11 +137,13 @@ subdivisions=2
 
 ### 6.训练到一半也可以看效果
 `./darknet detector test cfg/voc.data cfg/yolov3-tiny-voc2.cfg backup/yolov3-tiny-voc2.backup data/dog.jpg -thresh 0.01`
+
 ![RESULT](./RESULT.png)
 ![RESULT](./predictions_001.png)
 
 如果你觉得框的太多了，就降低阈值吧：
 `./darknet detector test cfg/voc.data cfg/yolov3-tiny-voc2.cfg backup/yolov3-tiny-voc2.backup data/dog.jpg -thresh 0.1`
+
 ![RESULT](./RESULT2.png)
 ![RESULT](./predictions_03.png)
 
