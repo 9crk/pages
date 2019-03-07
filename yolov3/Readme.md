@@ -133,21 +133,22 @@ subdivisions=2
 ### 5.开始训练
 `./darknet detector train cfg/voc.data cfg/yolov3-tiny-voc2.cfg`
 然后可以看到IOU在不断增加
-![IOU](./IOU.png)
+<center><img src=./IOU.png height="400" width="400"></img></center>
 如果中途不小心down机了，没关系，继续从关机前的位置训练
 `./darknet detector train cfg/voc.data cfg/yolov3-tiny-voc2.cfg backup/yolov3-tiny-voc2.backup`
 
 ### 6.训练到一半也可以看效果
 `./darknet detector test cfg/voc.data cfg/yolov3-tiny-voc2.cfg backup/yolov3-tiny-voc2.backup data/dog.jpg -thresh 0.01`
 
-![RESULT](./RESULT.png){:height="200" width="200"}
+<center><img src=./RESULT.png height="400" width="300"></img></center>
 
-![RESULT](./predictions_001.jpg)
+<center><img src=./predictions_001.jpg height="400" width="400"></img></center>
 
 如果你觉得框的太多了，就降低阈值吧：
 `./darknet detector test cfg/voc.data cfg/yolov3-tiny-voc2.cfg backup/yolov3-tiny-voc2.backup data/dog.jpg -thresh 0.1`
 
-![RESULT](./RESULT2.png){:height="200" width="200"}
+<center><img src=./RESULT2.png height="400" width="300"></img></center>
 
-![RESULT](./predictions_03.jpg)
+<center><img src=./predictions_03.jpg height="400" width="400"></img></center>
 
+完结！
