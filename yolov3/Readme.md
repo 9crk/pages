@@ -41,7 +41,9 @@ SegmentationClass
 SegmentationObject
 ```
 这几个文件夹,其中，ImageSets / SegmentationClass / SegmentationObject 是我们用不到的，里面是一些图像名称信息和抠图的区域信息，类似入下：
+
 ![抠图](./2011_002223.png)
+
 我们只用到了JPEGImages Annotations 这两个文件夹，因为里面的xml有我们需要的每张图种含有的物体类，和物体位置矩形框。
 执行如下：
 
@@ -139,11 +141,13 @@ subdivisions=2
 `./darknet detector test cfg/voc.data cfg/yolov3-tiny-voc2.cfg backup/yolov3-tiny-voc2.backup data/dog.jpg -thresh 0.01`
 
 ![RESULT](./RESULT.png)
+
 ![RESULT](./predictions_001.png)
 
 如果你觉得框的太多了，就降低阈值吧：
 `./darknet detector test cfg/voc.data cfg/yolov3-tiny-voc2.cfg backup/yolov3-tiny-voc2.backup data/dog.jpg -thresh 0.1`
 
 ![RESULT](./RESULT2.png)
+
 ![RESULT](./predictions_03.png)
 
