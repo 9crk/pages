@@ -1,6 +1,6 @@
 # yolo笔记1——训练和测试voc
 ### 1.编译
-修改Makefile [人穷，没显卡，都改为0吧]
+修改Makefile [没显卡的话，都改为0吧]
 
 ```
 GPU=0
@@ -110,7 +110,7 @@ backup = backup
 这个是网络模型文件，决定了网络的结构和训练网络的参数
 
 ```
-zhouhua@ihoment:~/voc/darknet$ cat cfg/yolov3-tiny-voc.cfg 
+zhouhua@xbox:~/voc/darknet$ cat cfg/yolov3-tiny-voc.cfg 
 [net]
 #Testing
 batch=1
